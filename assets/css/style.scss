@@ -1,0 +1,43 @@
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  background: #fdfdfd;
+  color: #333;
+}
+
+.hero {
+  background: linear-gradient(90deg, #007acc, #00c6ff);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.content {
+  flex: 3;
+  padding-right: 2rem;
+}
+
+.sidebar {
+  flex: 1;
+  background: #fafafa;
+  padding: 1rem;
+  border-left: 2px solid #eee;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background: #f0f0f0;
+  margin-top: 2rem;
+}

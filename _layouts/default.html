@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <!-- Hero Banner -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>{{ site.title }}</h1>
+      <p>{{ site.description }}</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Main Content -->
+    <section class="content">
+      {{ content }}
+    </section>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <section>
+        <h3>About this Blog</h3>
+        <p>Sharing projects, experiments, and insights from Echo‑Grid.</p>
+      </section>
+      <section>
+        <h3>Blog Updates</h3>
+        <p>Subscribe via <a href="{{ '/feed.xml' | relative_url }}">RSS</a>.</p>
+      </section>
+      <section>
+        <h3>Older Posts</h3>
+        <ul>
+          {% for post in site.posts limit:5 %}
+            <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </section>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; {{ site.time | date: '%Y' }} {{ site.author }} — Powered by Jekyll & GitHub Pages</p>
+  </footer>
+</body>
+</html>
