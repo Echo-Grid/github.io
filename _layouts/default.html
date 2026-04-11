@@ -3,34 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <title>{{ page.title }} | {{ site.title }}</title>
-  <meta name="description" content="{{ site.description }}">
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
 </head>
 <body>
-  <!-- Hero Banner -->
   <header class="hero">
-    <div class="hero-content">
-      <h1>{{ site.title }}</h1>
-      <p>{{ site.description }}</p>
-    </div>
+    <h1>{{ site.title }}</h1>
+    <p>{{ site.description }}</p>
   </header>
 
   <main class="container">
-    <!-- Main Content -->
-    <section class="content">
+    <div class="content">
       {{ content }}
-    </section>
+    </div>
 
-    <!-- Sidebar -->
     <aside class="sidebar">
       <section>
         <h3>About this Blog</h3>
         <p>This blog is conceived as a dynamic intellectual forum that bridges rigorous academic inquiry with accessible public discourse. Its purpose is to interrogate contemporary issues—spanning technology, culture, science, and society—through the lens of critical analysis, comparative frameworks, and interdisciplinary synthesis.</p>
       </section>
+
       <section>
         <h3>Blog Updates</h3>
         <p>New posts every weekend, patience is key✨.</p>
       </section>
+
+      <section>
+        <h3>About the Author</h3>
+        <p>Prāvha Zenith is a writer who blends Indic philosophy with modern minimalism, creating a unique voice that resonates across cultures. Rooted in the Sanskrit concept of <em>pravāha</em> — meaning flow — his work embodies the continuous stream of ideas, reflections, and insights that shape human experience.</p>
+      </section>
+
       <section>
         <h3>Older Posts</h3>
         <ul>
@@ -43,7 +44,8 @@
   </main>
 
   <footer class="footer">
-    <p>&copy; {{ site.time | date: '%Y' }} {{ site.author }} — Powered by Jekyll & GitHub Pages</p>
+    <p>© {{ site.time | date: "%Y" }} {{ site.title }} — Powered by Jekyll & GitHub Pages</p>
   </footer>
 </body>
 </html>
+
